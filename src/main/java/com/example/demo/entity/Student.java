@@ -17,7 +17,7 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "student_name", length = 50, nullable = false)
+    @Column(name = "student_name", length = 50, nullable = true)
     @NotBlank(message = "This field cannot be empty")
     private String studentName;
 

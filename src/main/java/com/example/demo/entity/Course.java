@@ -16,9 +16,11 @@ public  class Course {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+
     @Column(name = "course_name", nullable = false)
     @NotBlank(message = "This field cannot be blank")
     private String courseName;
+
     @ManyToMany(mappedBy = "courses")
     List<Student> students = new ArrayList<>();
 }
